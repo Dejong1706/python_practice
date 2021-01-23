@@ -1,5 +1,9 @@
 # 터틀 함수를 이용한 오목 만들어보기
-
+# 게임 규칙 
+# 1. 마우스 왼쪽클릭은(빨강) player1, 오른쪽클릭은(검정) player2가 된다
+# 2. 홀수번째 차례는 player1이 바둑알을 두고 짝수번째 차례는 player2가 바둑알을 둔다
+# 3. 게임의 승패는 먼저 가로, 세로, 대각선으로 바둑알을 5개를 먼저 정렬시키면 게임의 승자가 된다
+# <마우스를 클릭한곳에 바둑알이 놓아지니 선에 맞춰 잘클릭하셔야 합니다!!!>
 import turtle as t
 
 def title():
@@ -29,7 +33,7 @@ def right_click(x,y):
     t.pendown()
     t.stamp()
 def left_click(x,y):
-    t.fillcolor("blue")
+    t.fillcolor("red")
     t.penup()
     t.goto(x,y)
     t.pendown()
@@ -44,8 +48,8 @@ if __name__ == "__main__":
     garo_screen()
     t.rt(90)
     sero_screen()
-    t.onscreenclick(right_click,1)
-    t.onscreenclick(left_click,3)
+    t.onscreenclick(right_click,3)
+    t.onscreenclick(left_click,1)
 
     t.mainloop()
 
